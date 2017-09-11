@@ -20,16 +20,28 @@ function readLine() {
 
 /////////////// ignore above this line ////////////////////
 
+/**
+If n is odd, print Weird
+If n is even and in the inclusive range of 2 to 5 , print Not Weird
+If n is even and in the inclusive range of 6 to 20 , print Weird
+If n is even and greater than 20 , print Not Weird
+*/
+
 function main() {
     var N = parseInt(readLine());
-    
-   if (N % 2 === 0){
-        console.log("Not Weird")
-    }else{
-        console.log('Weird');
-    }
-     
-    
-    
+ 
 
+         if((N > 20)&& (N % 2 ===0)){
+            console.log("Not Weird")
+        }
+    else if((2 <= N >= 5)&& (N % 2 ===0)){
+            console.log("Not Weird")
+        }
+    else if((6 <= N >= 20)&& (N % 2 ===0)){
+            console.log("Weird")
+        }
+
+          else if (N % 3 === 0){
+            console.log("Weird")
+        }
 }
